@@ -1,9 +1,9 @@
 package id.ac.polinema.intent;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ProfileBundleActivity extends AppCompatActivity {
 
@@ -24,6 +24,8 @@ public class ProfileBundleActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             // TODO: display value here
+
+            model.User user = extras.getParcelable(ParcelableActivity.USER_KEY);
 
             usernameText.setText(extras.getString( "username"));
             nameText.setText(extras.getString( "name"));
